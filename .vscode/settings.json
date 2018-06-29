@@ -1,0 +1,15 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "files.exclude":{
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.js": { "when": "$(basename).ts" },
+        "**/**.js": { "when": "$(basename).tsx" }
+    }
+}
