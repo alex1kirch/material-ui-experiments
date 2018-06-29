@@ -1,7 +1,10 @@
 import * as React from "react";
+import { Route, Switch } from "react-router";
 import "./App.css";
-
 import logo from "./logo.svg";
+
+const miss = () => <div>Miss</div>;
+const match = () => <div>Match</div>;
 
 class App extends React.Component {
   public render() {
@@ -14,6 +17,10 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <Switch>
+          <Route exact={true} path="/" render={match} />
+          <Route render={miss} />
+        </Switch>
       </div>
     );
   }
