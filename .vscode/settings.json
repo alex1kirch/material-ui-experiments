@@ -3,7 +3,7 @@
     "typescript.implementationsCodeLens.enabled": true,
     "typescript.referencesCodeLens.enabled": true,
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "files.exclude":{
+    "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
@@ -11,5 +11,6 @@
         "**/.DS_Store": true,
         "**/*.js": { "when": "$(basename).ts" },
         "**/**.js": { "when": "$(basename).tsx" }
-    }
+    },
+    "editor.rulers": [100]
 }
