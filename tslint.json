@@ -2,6 +2,7 @@
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "linterOptions": {
     "exclude": [
+      "prettier.config.js",
       "config/**/*.js",
       "node_modules/**/*.ts"
     ]
