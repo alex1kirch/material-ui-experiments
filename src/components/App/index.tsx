@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Route, Switch } from "react-router";
 import withRoot from "../../decorators/withRoot";
-import "./App.css";
 import logo from "./logo.svg";
 
 const miss = () => <div>Miss</div>;
