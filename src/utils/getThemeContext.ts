@@ -13,7 +13,6 @@ function getTheme(uiTheme: IUiTheme) {
 }
 
 const jss = create({ plugins: [...(jssPreset().plugins as any), rtl()] });
-(jss as any).options.insertionPoint = "jss-insertion-point";
 let themeContext: ReturnType<typeof createThemeContext>;
 
 function createThemeContext() {
