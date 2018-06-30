@@ -11,7 +11,7 @@ The repository is designed to study Material-UI. I will try to implement some fe
 - [ ] Add GraphQL and Apollo Client
 - [ ] Add Material Dashboard
 - [x] Add HMR for js-in-css
-- [ ] Add lint-staged with prettier
+- [x] Add lint-staged with prettier
 
 ## License
 

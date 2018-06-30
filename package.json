@@ -38,7 +38,20 @@
         "start": "react-scripts-ts start",
         "build": "react-scripts-ts build",
         "test": "react-scripts-ts test --env=jsdom",
-        "eject": "react-scripts-ts eject"
+        "eject": "react-scripts-ts eject",
+        "precommit": "lint-staged",
+        "lint-staged": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "tslint --fix",
+            "prettier --parser typescript --write",
+            "git add"
+        ],
+        "*.{png,jpeg,jpg,gif,svg}": [
+            "imagemin-lint-staged",
+            "git add"
+        ]
     },
     "devDependencies": {
         "@types/enzyme": "^3.1.11",
@@ -57,8 +70,13 @@
         "@types/webpack-env": "^1.13.6",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
+        "husky": "^0.14.3",
+        "imagemin-lint-staged": "^0.3.0",
+        "lint-staged": "^7.2.0",
+        "prettier": "^1.13.7",
         "react-test-renderer": "^16.4.1",
         "redux-devtools-extension": "^2.13.5",
+        "tslint": "^5.10.0",
         "typescript": "^2.9.2"
     },
     "sideEffects": false,
