@@ -1,12 +1,9 @@
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import JssProvider from "react-jss/lib/JssProvider";
 import getThemeContext, { IUiTheme, ThemeContext } from "../utils/getThemeContext";
-
-function uiThemeSideEffect(uiTheme: IUiTheme) {
-    document.body.dir = uiTheme.direction;
-}
 
 interface IProps {
     uiTheme: IUiTheme;
@@ -14,7 +11,7 @@ interface IProps {
 interface IState {
     themeContext: ThemeContext;
 }
-class AppWrapper extends React.Component<IProps, IState> {
+class ThemeProvider extends React.Component<IProps, IState> {
     public static getDerivedStateFromProps(nextProps: IProps, prevState: IState) {
         if (nextProps.uiTheme !== prevState.themeContext.uiTheme) {
             return { themeContext: getThemeContext(nextProps.uiTheme) };
@@ -24,14 +21,6 @@ class AppWrapper extends React.Component<IProps, IState> {
     }
 
     public state: IState = { themeContext: getThemeContext(this.props.uiTheme) };
-
-    public componentDidMount() {
-        uiThemeSideEffect(this.props.uiTheme);
-    }
-
-    public componentDidUpdate() {
-        uiThemeSideEffect(this.props.uiTheme);
-    }
 
     public render() {
         const { children } = this.props;
@@ -47,6 +36,9 @@ class AppWrapper extends React.Component<IProps, IState> {
                     theme={themeContext.muiTheme}
                     sheetsManager={themeContext.sheetsManager}
                 >
+                    <Helmet>
+                        <body dir={themeContext.uiTheme.direction} />
+                    </Helmet>
                     <CssBaseline />
                     {children}
                 </MuiThemeProvider>
@@ -55,4 +47,4 @@ class AppWrapper extends React.Component<IProps, IState> {
     }
 }
 
-export default AppWrapper;
+export default ThemeProvider;
