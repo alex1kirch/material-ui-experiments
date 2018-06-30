@@ -1,25 +1,20 @@
-import { TextField } from "@material-ui/core";
 import * as React from "react";
+import { hot } from "react-hot-loader";
 import { Route, Switch } from "react-router";
-
-const miss = () => <div>Miss</div>;
-const match = () => <div>Match</div>;
+import HomePage from "./routes/HomePage";
+import NotFound from "./routes/NotFound";
 
 class App extends React.Component {
     public render() {
         return (
-            <div className="App">
-                <div>
-                    <TextField label="Name" />
-                    <input type="text" placeholder="Name" />
-                </div>
+            <div>
                 <Switch>
-                    <Route exact={true} path="/" render={match} />
-                    <Route render={miss} />
+                    <Route exact={true} path="/" component={HomePage} />
+                    <Route component={NotFound} />
                 </Switch>
             </div>
         );
     }
 }
 
-export default App;
+export default hot(module)(App);
