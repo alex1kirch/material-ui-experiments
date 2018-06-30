@@ -5,7 +5,13 @@ The repository is designed to study Material-UI. I will try to implement some fe
 
 - [X] Add rtl support
 - [ ] Add localization provider
+- [ ] Add ContextMenu component via Popover
 - [ ] Add CI
+- [ ] Add react-styleguidist
+- [ ] Add GraphQL and Apollo Client
+- [ ] Add Material Dashboard
+- [ ] Add HMR for js-in-css
+- [ ] Add lint-staged with prettier
 
 ## License
 
