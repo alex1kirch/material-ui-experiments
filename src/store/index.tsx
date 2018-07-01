@@ -1,16 +1,16 @@
 import { connectRouter, routerMiddleware } from "connected-react-router";
-import { createBrowserHistory } from "history";
+import createBrowserHistory from "history/createBrowserHistory";
 import { applyMiddleware, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
-import { IStoreState } from "./types";
+import { StoreState } from "../types";
+import reducer from "./reducer";
 
-const rootReducer = (state: IStoreState) => state;
 export const history = createBrowserHistory();
 const composeEnhancers = composeWithDevTools({});
-const initialState = {};
+const initialState: Partial<StoreState> = {};
 
 const store = createStore(
-    connectRouter(history)(rootReducer), // new root reducer with router state
+    connectRouter(history)(reducer), // new root reducer with router state
     initialState,
     composeEnhancers(applyMiddleware(routerMiddleware(history))),
 );

@@ -4,8 +4,8 @@ import PageLayout from "../common/PageLayout";
 
 const messages = defineMessages({
     title: {
-        defaultMessage: "Home page",
-        id: "HomePage.title",
+        defaultMessage: "Page not found",
+        id: "NotFoundPage.title",
     },
 });
 

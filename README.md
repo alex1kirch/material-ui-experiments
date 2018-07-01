@@ -4,7 +4,7 @@ The repository is designed to study Material-UI. I will try to implement some fe
 ## ☑ TODO
 
 - [X] Add rtl support
-- [ ] Add localization provider
+- [x] Add localization provider
 - [ ] Add ContextMenu component via Popover
 - [ ] Add CI
 - [ ] Add react-styleguidist

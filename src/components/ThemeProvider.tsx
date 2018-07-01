@@ -1,5 +1,5 @@
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import JssProvider from "react-jss/lib/JssProvider";

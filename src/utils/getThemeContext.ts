@@ -1,4 +1,7 @@
-import { createGenerateClassName, createMuiTheme, jssPreset } from "@material-ui/core/styles";
+import createGenerateClassName from "@material-ui/core/styles/createGenerateClassName";
+import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import jssPreset from "@material-ui/core/styles/jssPreset";
+
 import { create, SheetsRegistry } from "jss";
 import rtl from "jss-rtl";
 

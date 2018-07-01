@@ -1,16 +1,18 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
 import { Route, Switch } from "react-router";
+import AppBar from "./common/AppBar";
 import HomePage from "./routes/HomePage";
-import NotFound from "./routes/NotFound";
+import NotFoundPage from "./routes/NotFoundPage";
 
 class App extends React.Component {
     public render() {
         return (
             <div>
+                <AppBar />
                 <Switch>
                     <Route exact={true} path="/" component={HomePage} />
-                    <Route component={NotFound} />
+                    <Route component={NotFoundPage} />
                 </Switch>
             </div>
         );

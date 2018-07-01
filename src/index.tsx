@@ -3,7 +3,6 @@ import * as ReactDOM from "react-dom";
 import Root from "./components/Root";
 import registerServiceWorker from "./registerServiceWorker";
 
-// tslint:disable-next-line:no-shadowed-variable
 function renderApp(Component: typeof Root) {
     ReactDOM.render(<Component />, document.getElementById("root") as HTMLElement);
 }

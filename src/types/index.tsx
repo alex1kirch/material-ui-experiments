@@ -1,2 +1,3 @@
-// tslint:disable-next-line:no-empty-interface
-export interface IStoreState {}
+import reducer from "../store/reducer";
+
+export type StoreState = ReturnType<typeof reducer>;
