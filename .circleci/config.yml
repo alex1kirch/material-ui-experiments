@@ -20,23 +20,6 @@ jobs:
       - run:
           name: Check Prettier, TSLint
           command: yarn ci-check
-  test:
-    docker:
-      - image: circleci/node:8.9.1-stretch-browsers
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - dependencies-{{ checksum "yarn.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - dependencies-
-      - run:
-          name: Install
-          command: yarn install
-      - save_cache:
-          paths:
-            - node_modules
-          key: dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Test
           command: yarn test:ci
@@ -48,9 +31,6 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test:
-          requires:
-            - build
           filters:
             branches:
               ignore: gh-pages
