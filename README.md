@@ -10,7 +10,7 @@ The repository is designed to study Material-UI. I will try to implement some fe
 - [ ] Add react-styleguidist
 - [ ] Add GraphQL and Apollo Client
 - [ ] Add Material Dashboard
-- [x] Add HMR for js-in-css
+- [x] Add HMR for css-in-js
 - [x] Add lint-staged with prettier
 
 ## License
