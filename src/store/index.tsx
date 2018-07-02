@@ -15,4 +15,13 @@ const store = createStore(
     composeEnhancers(applyMiddleware(routerMiddleware(history))),
 );
 
+// For hot reloading reducer
+if (module.hot) {
+    // Enable Webpack hot module replacement for reducer
+    module.hot.accept("./reducer", () => {
+        const nextReducer = require("./reducer").default;
+        store.replaceReducer(nextReducer);
+    });
+}
+
 export default store;
