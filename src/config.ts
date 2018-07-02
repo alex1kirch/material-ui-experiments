@@ -1,1 +1,1 @@
-export const APP_NAME = "@@m   ui-exp";
+export const APP_NAME = "@@mui-exp";
