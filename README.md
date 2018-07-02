@@ -6,7 +6,7 @@ The repository is designed to study Material-UI. I will try to implement some fe
 - [X] Add rtl support
 - [x] Add localization provider
 - [ ] Add ContextMenu component via Popover
-- [ ] Add CI
+- [x] Add CI
 - [ ] Add react-styleguidist
 - [ ] Add GraphQL and Apollo Client
 - [ ] Add Material Dashboard
