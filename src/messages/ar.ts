@@ -1,3 +1,3 @@
 export default {
-    "AppBar.Title": "__Title_AR__",
+    "AppBar.Title": "_Title_",
 };
