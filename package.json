@@ -43,7 +43,11 @@
         "test": "react-scripts-ts test --env=jsdom",
         "eject": "react-scripts-ts eject",
         "precommit": "lint-staged",
-        "lint-staged": "lint-staged"
+        "lint-staged": "lint-staged",
+        "test:ci": "cross-env CI=true react-scripts-ts test --env=jsdom --maxWorkers 2 --coverage && codecov",
+        "prettier:diff": "prettier --parser typescript --list-different \"*.{ts,tsx}\"",
+        "ci-check": "yarn prettier:diff && yarn lint",
+        "lint": "tslint '*.{ts,tsx}'"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
@@ -73,6 +77,8 @@
         "@types/react-test-renderer": "^16.0.1",
         "@types/redux-devtools-extension": "^2.13.2",
         "@types/webpack-env": "^1.13.6",
+        "codecov": "^3.0.2",
+        "cross-env": "^5.2.0",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "husky": "^0.14.3",

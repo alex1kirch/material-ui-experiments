@@ -4,7 +4,8 @@
     "exclude": [
       "prettier.config.js",
       "config/**/*.js",
-      "node_modules/**/*.ts"
+      "node_modules/**/*.ts",
+      "coverage"
     ]
   }
 }
