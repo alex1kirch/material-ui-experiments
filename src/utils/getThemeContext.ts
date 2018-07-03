@@ -24,7 +24,7 @@ function createThemeContext() {
 
     return {
         generateClassName: createGenerateClassName({
-            productionPrefix: "jtest",
+            productionPrefix: "mui-exp",
         }),
         jss,
         muiTheme,
