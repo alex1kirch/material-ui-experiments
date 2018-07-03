@@ -1,8 +1,20 @@
 {
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+    "typescript.tsdk": "node_modules/typescript/lib",
     "typescript.implementationsCodeLens.enabled": true,
     "typescript.referencesCodeLens.enabled": true,
-    "typescript.tsdk": "./node_modules/typescript/lib",
+    "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "typescript.format.enable": false,
+    "typescript.preferences.quoteStyle": "double",
+    "typescript.autoImportSuggestions.enabled": true,
+
+    "javascript.format.enable": false,
+    "javascript.preferences.quoteStyle": "double",
+
+    "tslint.autoFixOnSave": true,
+
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -12,5 +24,12 @@
         "**/*.js": { "when": "$(basename).ts" },
         "**/**.js": { "when": "$(basename).tsx" }
     },
-    "editor.rulers": [100]
+
+    "editor.rulers": [120],
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+
+    "cSpell.language": "en",
+
+    "deepscan.enable": true
 }
