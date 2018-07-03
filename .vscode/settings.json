@@ -28,6 +28,7 @@
     "editor.rulers": [120],
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
+    "editor.renderIndentGuides": true,
 
     "cSpell.language": "en",
 
