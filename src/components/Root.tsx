@@ -1,15 +1,10 @@
 import { ConnectedRouter as Router } from "connected-react-router";
 import * as React from "react";
-import { addLocaleData } from "react-intl";
-import * as ar from "react-intl/locale-data/ar";
-import * as en from "react-intl/locale-data/en";
 import { Provider } from "react-redux";
 import store, { history } from "../store";
 import App from "./App";
 import DirectionProvider from "./DirectionProvider";
 import ReduxConnectedIntlProvider from "./ReduxConnectedIntlProvider";
-
-addLocaleData([...en, ...ar]);
 
 const Root = () => (
     <React.StrictMode>

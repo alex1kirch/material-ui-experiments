@@ -10,7 +10,7 @@ import * as React from "react";
 import { defineMessages, FormattedMessage, InjectedIntlProps, injectIntl } from "react-intl";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import { selectLocale } from "../../modules/locale";
+import { changeLocale } from "../../modules/locale";
 import { getOtherLocale } from "../../utils/locale";
 import NavBar from "./NavBar";
 
@@ -37,7 +37,7 @@ const styles = (theme: Theme) =>
     });
 
 const dispatchToProps = {
-    selectLocale,
+    changeLocale,
 };
 type Props = WithStyles<typeof styles> & InjectedIntlProps & typeof dispatchToProps;
 
@@ -50,7 +50,8 @@ const decorator = compose(
     ),
 );
 
-export default decorator(({ classes, intl, selectLocale: changeLocale }: Props) => {
+// tslint:disable-next-line:no-shadowed-variable
+export default decorator(({ classes, intl, changeLocale }: Props) => {
     const handleToggleLanguage = () => {
         const { locale } = intl;
 
@@ -67,12 +68,7 @@ export default decorator(({ classes, intl, selectLocale: changeLocale }: Props) 
                 <NavBar />
                 <Tooltip
                     id="appbar-language"
-                    title={
-                        <FormattedMessage
-                            id="AppBar.Language.Tooltip"
-                            defaultMessage="Toggle en/ar"
-                        />
-                    }
+                    title={<FormattedMessage id="AppBar.Language.Tooltip" defaultMessage="Toggle en/ar" />}
                     enterDelay={300}
                 >
                     <IconButton
