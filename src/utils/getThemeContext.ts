@@ -4,9 +4,10 @@ import jssPreset from "@material-ui/core/styles/jssPreset";
 
 import { create, SheetsRegistry } from "jss";
 import rtl from "jss-rtl";
+import { Directions } from "./locale";
 
 export interface IUiTheme {
-    direction: "rtl" | "ltr";
+    direction: Directions;
 }
 
 function getTheme(uiTheme: IUiTheme) {
