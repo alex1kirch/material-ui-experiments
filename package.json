@@ -44,12 +44,16 @@
         "build": "react-scripts-ts build",
         "test": "react-scripts-ts test --env=jsdom",
         "eject": "react-scripts-ts eject",
-        "precommit": "lint-staged",
         "lint-staged": "lint-staged",
         "test:ci": "cross-env CI=true react-scripts-ts test --env=jsdom --maxWorkers 2 --coverage && codecov",
         "prettier:diff": "prettier --parser typescript --list-different \"*.{ts,tsx}\"",
         "ci-check": "yarn prettier:diff && yarn lint",
         "lint": "tslint '*.{ts,tsx}'"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
     },
     "lint-staged": {
         "*.{ts,tsx}": [
