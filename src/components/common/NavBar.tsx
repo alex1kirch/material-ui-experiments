@@ -45,7 +45,7 @@ const routes: Array<{
     {
         icon: <RestoreIcon />,
         label: <FormattedMessage {...messages.recents} />,
-        path: "/recepts",
+        path: "/recents",
     },
     {
         icon: <FavoriteIcon />,
