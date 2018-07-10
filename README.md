@@ -8,10 +8,14 @@ The repository is designed to study Material-UI. I will try to implement some fe
 
 -   [x] Add rtl support
 -   [x] Add localization provider
--   [ ] Add ContextMenu component via Popover
 -   [x] Add CI
+-   [x] Add GraphQL and Apollo Client
+-   [ ] Add ContextMenu component via Popover
+-   [ ] Add tests for reducer, react component, thunk, saga.
+-   [ ] Add snapshot tests.
+-   [ ] Add e2e tests.
+-   [ ] Add lerna and split code to the workspaces and playground
 -   [ ] Add react-styleguidist
--   [ ] Add GraphQL and Apollo Client
 -   [ ] Add Material Dashboard
 -   [x] Add HMR for css-in-js
 -   [x] Add lint-staged with prettier

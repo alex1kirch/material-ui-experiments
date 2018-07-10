@@ -1,0 +1,12 @@
+# source: https://w5xlvm3vzz.lp.gql.zone/graphql
+# timestamp: Wed Jul 11 2018 03:15:27 GMT+0500 (Russia TZ 4 Standard Time)
+
+type ExchangeRate {
+  currency: String
+  rate: String
+  name: String
+}
+
+type Query {
+  rates(currency: String!): [ExchangeRate]
+}

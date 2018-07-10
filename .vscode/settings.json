@@ -32,5 +32,9 @@
 
     "cSpell.language": "en",
 
-    "deepscan.enable": true
+    "deepscan.enable": true,
+    "cSpell.words": [
+        "appbar",
+        "labelledby"
+    ]
 }

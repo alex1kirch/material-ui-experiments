@@ -17,3 +17,4 @@
 -   Auto Rename Tag
 -   Azure Cosmos DB
 -   TODO Highlight
+-   GraphQL for VSCode

@@ -1,0 +1,20 @@
+{
+  "projects": {
+    "mui-exp": {
+      "schemaPath": "schemas/schema.graphql",
+      "extensions": {
+        "endpoints": {
+          "default": "https://w5xlvm3vzz.lp.gql.zone/graphql"
+        },
+        "codegen":  {
+            "generator": "typegen",
+            "language": "typescript",
+            "input": "**/*.tsx",
+            "output": {
+                "typings": "src/types/graphql.ts"
+            }
+        }
+      }
+    }
+  }
+}
