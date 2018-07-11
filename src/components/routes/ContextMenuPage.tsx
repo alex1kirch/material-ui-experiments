@@ -16,13 +16,11 @@ export default () => (
     <PageLayout pageTitle={<FormattedMessage {...messages.title} />}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <ContextMenu
-                menuContent={
-                    <React.Fragment>
-                        <MenuItem>Menu item 1</MenuItem>
-                        <MenuItem>Menu item 2</MenuItem>
-                        <MenuItem>Menu item 3</MenuItem>
-                    </React.Fragment>
-                }
+                menuContent={[
+                    <MenuItem key={1}>Menu item 1</MenuItem>,
+                    <MenuItem key={2}>Menu item 2</MenuItem>,
+                    <MenuItem key={3}>Menu item 3</MenuItem>,
+                ]}
             >
                 <div style={{ border: "1px solid red", width: 200 }}>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsum veniam magnam odit?
