@@ -2,10 +2,11 @@ import * as React from "react";
 import { defineMessages, FormattedMessage } from "react-intl";
 import PageLayout from "../common/PageLayout";
 
+const idPrefix = "HomePage";
 const messages = defineMessages({
     title: {
         defaultMessage: "Home page",
-        id: "HomePage.title",
+        id: `${idPrefix}.Title`,
     },
 });
 

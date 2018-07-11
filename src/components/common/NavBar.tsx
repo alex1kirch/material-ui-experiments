@@ -1,26 +1,31 @@
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
+// import FavoriteIcon from "@material-ui/icons/Favorite";
+// import LocationOnIcon from "@material-ui/icons/LocationOn";
 import RestoreIcon from "@material-ui/icons/Restore";
 import * as React from "react";
 import { defineMessages, FormattedMessage } from "react-intl";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import { compose } from "redux";
 
+const idPrefix = "NavBar";
 const messages = defineMessages({
+    contextMenu: {
+        defaultMessage: "Context menu",
+        id: `${idPrefix}.ContextMenu`,
+    },
     favorites: {
         defaultMessage: "Favorites",
-        id: "NavBar.Favorites",
+        id: `${idPrefix}.Favorites`,
     },
     nearby: {
         defaultMessage: "Nearby",
-        id: "NavBar.Nearby",
+        id: `${idPrefix}.Nearby`,
     },
     recents: {
         defaultMessage: "Recents",
-        id: "NavBar.Recents",
+        id: `${idPrefix}.Recents`,
     },
 });
 
@@ -44,19 +49,19 @@ const routes: Array<{
 }> = [
     {
         icon: <RestoreIcon />,
-        label: <FormattedMessage {...messages.recents} />,
-        path: "/recents",
+        label: <FormattedMessage {...messages.contextMenu} />,
+        path: "/contextMenu",
     },
-    {
-        icon: <FavoriteIcon />,
-        label: <FormattedMessage {...messages.favorites} />,
-        path: "/favorites",
-    },
-    {
-        icon: <LocationOnIcon />,
-        label: <FormattedMessage {...messages.nearby} />,
-        path: "/nearby",
-    },
+    // {
+    //     icon: <FavoriteIcon />,
+    //     label: <FormattedMessage {...messages.favorites} />,
+    //     path: "/favorites",
+    // },
+    // {
+    //     icon: <LocationOnIcon />,
+    //     label: <FormattedMessage {...messages.nearby} />,
+    //     path: "/nearby",
+    // },
 ];
 
 type Props = WithStyles<typeof styles> & RouteComponentProps<any>;
