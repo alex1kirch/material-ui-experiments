@@ -12,6 +12,13 @@ The repository is designed to study Material-UI. I will try to implement some fe
 -   [x] Add CI
 -   [ ] Add react-styleguidist
 -   [ ] Add GraphQL and Apollo Client
+-   [ ] Add lerna and workspaces
+-   [ ] Add creation of the npm packages
 -   [ ] Add Material Dashboard
+-   [ ] Add tests for reducer, react component, thunk, saga.
+-   [ ] Add snapshot tests.
+-   [ ] Add e2e tests.
+-   [ ] Add webpack code splitting for async load of bundles
+-   [ ] Add SSR
 -   [x] Add HMR for css-in-js
 -   [x] Add lint-staged with prettier
