@@ -71,6 +71,10 @@
   version "0.22.8"
   resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.8.tgz#5702f74f78b73e13f1eb1bd435c2c9de61a250d4"
 
+"@types/classnames@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.4.tgz#d3ee9ebf714aa34006707b8f4a58fd46b642305a"
+
 "@types/enzyme-adapter-react-16@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.2.tgz#15ae37c64d6221a6f4b3a4aacc357cf773859de4"
@@ -116,6 +120,12 @@
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.6.tgz#f1a65a4e7be8ed5d123f8b3b9eacc913e35a1a3c"
   dependencies:
     "@types/node" "*"
+    "@types/react" "*"
+
+"@types/react-event-listener@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@types/react-event-listener/-/react-event-listener-0.4.5.tgz#e2e46deb007533fe260b4cf364a90954cc59ca5b"
+  dependencies:
     "@types/react" "*"
 
 "@types/react-helmet@^5.0.6":
@@ -1730,7 +1740,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5:
+classnames@^2.2.5, classnames@^2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
@@ -7262,7 +7272,7 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
-react-event-listener@^0.6.0:
+react-event-listener@^0.6.0, react-event-listener@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.6.1.tgz#41c7a80a66b398c27dd511e22712b02f3d4eccca"
   dependencies:
