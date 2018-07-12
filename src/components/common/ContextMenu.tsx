@@ -4,7 +4,7 @@ import contextMenu, { ContextMenuProps } from "../../decorators/contextMenu";
 
 interface IProps {
     /**
-     * Contains props of the internal Menu component.
+     * Properties applied to the Menu element.
      *
      * @type {MenuProps}
      * @memberof IProps
@@ -12,7 +12,7 @@ interface IProps {
     MenuProps?: MenuProps;
 
     /**
-     * Contains content of the internal Menu component. The Menu component is used as context menu.
+     * Menu contents, normally MenuItems. The Menu component is used as context menu.
      *
      * @type {React.ReactNode}
      * @memberof IProps
@@ -20,7 +20,7 @@ interface IProps {
     menuContent?: React.ReactNode;
 
     /**
-     * Contains className of the ContextMenu component
+     * The className of the ContextMenu component
      *
      * @type {string}
      * @memberof IProps

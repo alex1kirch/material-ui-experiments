@@ -15,14 +15,14 @@ export type ContextMenuProps = IState & {
 
 interface IProps {
     /**
-     * Disable context menu default action of backdrop element if menu is open
+     * If true, the browser context menu of backdrop element will be disabled in the case of the menu is open
      *
      * @type {boolean}
      * @memberof IProps
      */
     disableBackdropMenu?: boolean;
     /**
-     * If true, menu won't be open
+     * If true, the menu won't be open
      *
      * @type {boolean}
      * @memberof IProps
