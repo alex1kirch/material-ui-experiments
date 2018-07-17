@@ -6,12 +6,12 @@ import TodoListContainer from "./TodoListContainer";
 
 const setup = () => {
     const wrapper = shallow(<TodoListContainer />);
-    const getTodoList = (wr: typeof wrapper) => wr.find(TodoList);
+    const todoListGetter = (wr: typeof wrapper) => wr.find(TodoList);
 
     return {
-        getTodoList,
         inputArea: wrapper.find(InputArea),
-        todoList: getTodoList(wrapper),
+        todoList: todoListGetter(wrapper),
+        todoListGetter,
         wrapper,
     };
 };
@@ -37,12 +37,12 @@ describe("<TodoListContainer />", () => {
 
     it("adds items to the list", () => {
         // arrange
-        const { wrapper, inputArea, getTodoList } = setup();
+        const { wrapper, inputArea, todoListGetter } = setup();
         const expected = "Sam Adams";
         // act
         const inputAreaProps = inputArea.props();
         inputAreaProps.onSubmit(expected);
-        const updatedTodoList = getTodoList(wrapper.update());
+        const updatedTodoList = todoListGetter(wrapper.update());
         const listProps = updatedTodoList.props();
         // assert
         expect(listProps.todos).toHaveLength(1);
