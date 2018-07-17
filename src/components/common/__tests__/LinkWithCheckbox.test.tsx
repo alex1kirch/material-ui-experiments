@@ -1,4 +1,5 @@
 import { shallow } from "enzyme";
+import enzymeToJson from "enzyme-to-json";
 import * as React from "react";
 import LinkWithCheckbox, { ILinkWithCheckboxProps } from "../LinkWithCheckbox";
 
@@ -21,15 +22,15 @@ const setup = (propOverrides?: Partial<ILinkWithCheckboxProps>) => {
 describe("<LinkWithCheckbox />", () => {
     it("renders without crashing", () => {
         const { wrapper } = setup();
-        expect(wrapper).toMatchSnapshot();
+        expect(enzymeToJson(wrapper)).toMatchSnapshot();
     });
 
     it("should be checked by default", () => {
-        const { input, wrapper } = setup({ isChecked: true });
+        const { input } = setup({ isChecked: true });
 
         const actual = input.props().checked;
         expect(actual).toBeTruthy();
-        // expect(wrapper).toMatchSnapshot();
+        // expect(enzymeToJson(wrapper)).toMatchSnapshot();
     });
 
     it("should call onChange on input onChange action", () => {

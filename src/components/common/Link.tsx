@@ -1,4 +1,5 @@
 import * as React from "react";
+import EventListener from "react-event-listener";
 
 export const STATUS = {
     HOVERED: "hovered",
@@ -54,6 +55,11 @@ export default class Link extends React.Component<IProps, IState> {
         console.log("componentDidCatch");
     }
 
+    public onResize() {
+        // tslint:disable-next-line:no-console
+        console.log("onResize");
+    }
+
     public render() {
         return (
             <a
@@ -63,6 +69,7 @@ export default class Link extends React.Component<IProps, IState> {
                 onMouseLeave={this.onMouseLeave}
             >
                 {this.props.children}
+                <EventListener target="window" onResize={this.onResize} />
             </a>
         );
     }

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { defineMessages, FormattedMessage } from "react-intl";
 import PageLayout from "../common/PageLayout";
+import TodoListContainer from "../todos/TodoListContainer";
 
 const idPrefix = "HomePage";
 const messages = defineMessages({
@@ -10,4 +11,6 @@ const messages = defineMessages({
     },
 });
 
-export default () => <PageLayout pageTitle={<FormattedMessage {...messages.title} />} />;
+export default () => (
+    <PageLayout pageTitle={<FormattedMessage {...messages.title} />} children={<TodoListContainer />} />
+);

@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Link /> renders without crashing 1`] = `
+<a
+  className="normal"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Facebook
+  <EventListener
+    onResize={[Function]}
+    target="window"
+  />
+</a>
+`;
+
 exports[`<Link /> shallow lifecycle 1`] = `
 <a
   className="normal"
@@ -8,5 +23,54 @@ exports[`<Link /> shallow lifecycle 1`] = `
   onMouseLeave={[Function]}
 >
   Facebook
+  <EventListener
+    onResize={[Function]}
+    target="window"
+  />
+</a>
+`;
+
+exports[`<Link /> should changes the class when hovered (toMatchSnapshot) 1`] = `
+<a
+  className="normal"
+  href="http://www.facebook.com"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Facebook
+  <EventListener
+    onResize={[Function]}
+    target="window"
+  />
+</a>
+`;
+
+exports[`<Link /> should changes the class when hovered (toMatchSnapshot) 2`] = `
+<a
+  className="hovered"
+  href="http://www.facebook.com"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Facebook
+  <EventListener
+    onResize={[Function]}
+    target="window"
+  />
+</a>
+`;
+
+exports[`<Link /> should changes the class when hovered (toMatchSnapshot) 3`] = `
+<a
+  className="normal"
+  href="http://www.facebook.com"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Facebook
+  <EventListener
+    onResize={[Function]}
+    target="window"
+  />
 </a>
 `;

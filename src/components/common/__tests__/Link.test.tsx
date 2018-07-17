@@ -1,16 +1,15 @@
 import { shallow } from "enzyme";
 import enzymeToJson from "enzyme-to-json";
-import "jest-enzyme";
 import * as React from "react";
 import Link, { STATUS } from "../Link";
 
 describe("<Link />", () => {
-    xit("renders without crashing", () => {
+    it("renders without crashing", () => {
         const wrapper = shallow(<Link>Facebook</Link>);
         expect(enzymeToJson(wrapper)).toMatchSnapshot();
     });
 
-    xit("should changes the class when hovered", () => {
+    it("should changes the class when hovered", () => {
         const wrapper = shallow(<Link page="http://www.facebook.com">Facebook</Link>);
         expect(wrapper.hasClass(STATUS.NORMAL)).toBeTruthy();
 
@@ -21,7 +20,7 @@ describe("<Link />", () => {
         expect(wrapper.hasClass(STATUS.NORMAL)).toBeTruthy();
     });
 
-    xit("should changes the class when hovered (toMatchSnapshot)", () => {
+    it("should changes the class when hovered (toMatchSnapshot)", () => {
         const wrapper = shallow(<Link page="http://www.facebook.com">Facebook</Link>);
         expect(enzymeToJson(wrapper)).toMatchSnapshot();
 
