@@ -48,6 +48,7 @@
         "eject": "react-scripts-ts eject",
         "lint-staged": "lint-staged",
         "test:ci": "cross-env CI=true react-scripts-ts test --env=jsdom --maxWorkers 2 --coverage && codecov",
+        "test:staged": "cross-env CI=true react-scripts-ts test --env=jsdom --findRelatedTests",
         "prettier:diff": "prettier --parser typescript --list-different \"*.{ts,tsx}\"",
         "ci-check": "yarn prettier:diff && yarn lint",
         "lint": "tslint '*.{ts,tsx}'"
@@ -61,6 +62,7 @@
         "*.{ts,tsx}": [
             "tslint --fix",
             "prettier --parser typescript --write",
+            "yarn test:staged",
             "git add"
         ],
         "*.{png,jpeg,jpg,gif,svg}": [
@@ -93,8 +95,10 @@
         "cross-env": "^5.2.0",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
+        "enzyme-to-json": "^3.3.4",
         "husky": "^1.0.0-rc.10",
         "imagemin-lint-staged": "^0.3.0",
+        "jest-enzyme": "^6.0.2",
         "lint-staged": "^7.2.0",
         "prettier": "^1.13.7",
         "react-test-renderer": "^16.4.1",
