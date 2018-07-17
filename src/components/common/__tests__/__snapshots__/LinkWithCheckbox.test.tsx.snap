@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkWithCheckbox /> renders without crashing 1`] = `
+<Link>
+  <input
+    checked={false}
+    data-test="input"
+    onChange={[MockFunction]}
+    type="checkbox"
+  />
+</Link>
+`;

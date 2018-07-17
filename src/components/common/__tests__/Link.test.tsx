@@ -2,7 +2,7 @@ import { shallow } from "enzyme";
 import enzymeToJson from "enzyme-to-json";
 import "jest-enzyme";
 import * as React from "react";
-import Link, { STATUS } from "./Link";
+import Link, { STATUS } from "../Link";
 
 describe("<Link />", () => {
     xit("renders without crashing", () => {
