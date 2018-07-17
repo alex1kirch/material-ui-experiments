@@ -25,10 +25,11 @@ describe("<LinkWithCheckbox />", () => {
     });
 
     it("should be checked by default", () => {
-        const { input } = setup({ isChecked: true });
+        const { input, wrapper } = setup({ isChecked: true });
 
         const actual = input.props().checked;
         expect(actual).toBeTruthy();
+        // expect(wrapper).toMatchSnapshot();
     });
 
     it("should call onChange on input onChange action", () => {
