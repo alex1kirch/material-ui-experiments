@@ -4,7 +4,7 @@ import * as React from "react";
 import Link, { STATUS } from "../Link";
 
 describe("<Link />", () => {
-    it("renders without crashing", () => {
+    it("renders a snapshot", () => {
         const wrapper = shallow(<Link>Facebook</Link>);
         expect(enzymeToJson(wrapper)).toMatchSnapshot();
     });

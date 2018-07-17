@@ -20,7 +20,7 @@ const setup = (propOverrides?: Partial<ILinkWithCheckboxProps>) => {
 };
 
 describe("<LinkWithCheckbox />", () => {
-    it("renders without crashing", () => {
+    it("renders a snapshot", () => {
         const { wrapper } = setup();
         expect(enzymeToJson(wrapper)).toMatchSnapshot();
     });

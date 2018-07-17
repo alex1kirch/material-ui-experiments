@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Link /> renders without crashing 1`] = `
+exports[`<Link /> renders a snapshot 1`] = `
 <a
   className="normal"
   href="#"

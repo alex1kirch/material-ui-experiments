@@ -28,6 +28,7 @@ describe("<InputArea />", () => {
         expect(input.exists()).toBeTruthy();
         expect(addButton.containsMatchingElement(<button>Add</button>)).toBeTruthy();
     });
+
     it("should accept input", () => {
         // arrange
         const { input, wrapper, inputGetter } = setup();

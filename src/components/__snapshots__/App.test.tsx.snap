@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div>
+  <InjectIntl(WithStyles(Connect(Component))) />
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      path="/contextMenu"
+    />
+    <Route
+      component={[Function]}
+    />
+  </Switch>
+</div>
+`;

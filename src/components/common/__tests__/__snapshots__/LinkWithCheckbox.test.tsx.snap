@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LinkWithCheckbox /> renders without crashing 1`] = `
+exports[`<LinkWithCheckbox /> renders a snapshot 1`] = `
 <Link>
   <input
     checked={false}
