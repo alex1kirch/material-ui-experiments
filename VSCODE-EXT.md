@@ -18,3 +18,5 @@
 -   Azure Cosmos DB
 -   TODO Highlight
 -   JEST
+-   DotENV
+-   Typescript React code snippets
