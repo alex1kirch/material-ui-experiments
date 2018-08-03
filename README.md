@@ -22,3 +22,11 @@ The repository is designed to study Material-UI. I will try to implement some fe
 -   [ ] Add SSR
 -   [x] Add HMR for css-in-js
 -   [x] Add lint-staged with prettier
+-   [ ] Add draft-js
+-   [ ] Add leaflet
+-   [ ] Add react-chartjs
+-   [ ] Add recharts
+-   [ ] Add react-chartist
+-   [ ] Add react-google-maps
+-   [ ] Add PerfectScrollbar
+-   [ ] Add Highcharts
