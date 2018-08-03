@@ -64,7 +64,7 @@ const routes: Array<{
     // },
 ];
 
-type Props = WithStyles<typeof styles> & RouteComponentProps<any>;
+type Props = WithStyles<typeof styles> & RouteComponentProps<{}>;
 class NavBar extends React.Component<Props> {
     public handleChange = (event: React.ChangeEvent<{}>, path: string) => {
         event.stopPropagation();
